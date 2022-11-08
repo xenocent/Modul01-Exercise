@@ -10,29 +10,30 @@ function calc(arr){
     let score = {highest:null,lowest:null,average:null}
     
     for(let x of arr){
-        let yearage = Date.now() - x.age
-        yearage = Math.floor(yearage/ (1000 * 60 *60 *24 * 365))
+        x.age = Date.now() - x.age
+        x.age = Math.floor(x.age/ (1000 * 60 *60 *24 * 365))
         
-        if(age.highest < yearage){
-            age.highest = yearage
+        if( age.highest == null || age.highest.age < x.age){
+            age.highest = x
         }
-        if(age.lowest > yearage || age.lowest == null){
-            age.lowest = yearage
+        if(age.lowest == null || age.lowest.age > x.age ){
+            age.lowest = x
         }
     
-        age.average += yearage
+        age.average += x.age
 
-        if(score.highest < x.score){
-            score.highest = x.score
+        if( score.highest == null || score.highest.score < x.score){
+            score.highest = x
         }
-        if(score.lowest > x.score || score.lowest == null){
-            score.lowest = x.score
+        if(score.lowest == null || score.lowest.score > x.score ){
+            score.lowest = x
         }
         score.average += x.score
     }
     age.average = age.average/arr.length    
     score.average = score.average/arr.length    
-    console.log(`Age highest = ${age.highest}, lowest = ${age.lowest}, rata-rata = ${age.average}\nScore highest = ${score.highest}, lowest = ${score.lowest}, rata-rata = ${score.average}`)
+    // console.log(`Age highest = ${age.highest}, lowest = ${age.lowest}, rata-rata = ${age.average}\nScore highest = ${score.highest}, lowest = ${score.lowest}, rata-rata = ${score.average}`)
+    console.log(age,score)
 }
 
 calc(input)
@@ -74,9 +75,9 @@ class transaction{
     }
 }
 
-let trans = new transaction()
-trans.add(new product("gelas",10000,2))
-trans.add(new product("piring",20000,1))
-trans.add(new product("sendok",5000,1))
-trans.show()
-trans.checkout()
+// let trans = new transaction()
+// trans.add(new product("gelas",10000,2))
+// trans.add(new product("piring",20000,1))
+// trans.add(new product("sendok",5000,1))
+// trans.show()
+// trans.checkout()
