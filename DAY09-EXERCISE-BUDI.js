@@ -98,8 +98,8 @@ function duplicateFilter(data,cbfn) {
     if(cbfn){
         let res = []
         for (let index = 0; index < data.length; index++) {
-            if(cbfn(data[index])){
-                res.push(data[index],index,data)
+            if(cbfn(data[index],index,data)){
+                res.push(data[index])
             }
         }
         return res
@@ -137,14 +137,14 @@ function power(currValue,index=0,data) {
 }
 
 function find(currValue,index=0,data){
-    return currValue > 3
+    return currValue >6
 }
 
-var arr = ["mobil","motor","pesawat","kapal"]
-let tryMap = arr.map(power)
-// let tryFilter = arr.filter(find)
+var arr = [1,2,3,4,5,6]
+// let tryMap = arr.map(power)
+let tryFilter = arr.filter(find)
 // let tryFindIndex = arr.findIndex(find)
 console.log("Array Sample",arr);
-console.log("Func buatan",duplicateMap(arr,power),"arr Func",tryMap);
-// console.log(duplicateFilter(arr,find),tryFilter);
-// console.log(duplicateFindIndex(arr,find),tryFindIndex);
+// console.log("Func buatan",duplicateMap(arr,power),"arr Func",tryMap);
+console.log("Func buatan",duplicateFilter(arr,find),"arr Func",tryFilter);
+// console.log("Func buatan",duplicateFindIndex(arr,find),"arr Func",tryFindIndex);
