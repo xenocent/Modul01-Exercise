@@ -103,3 +103,12 @@ function even(x) {
     }
     return `Print genap dari ${x}  => ${newarr}`
 }
+
+module.exports = {
+    picky,
+    gabung,
+    pecah,
+    calc,
+    add,
+    even,
+}
