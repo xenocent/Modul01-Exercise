@@ -5,7 +5,7 @@ const {
     calc,
     add,
     even,
-} =require("./DAY05-EXERCISE-BUDI")
+} =require("./DAY05-EXERCISE")
 
 let arra = [5,6,7,10]
 let arrb = [2,3,1]
