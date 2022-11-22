@@ -7,7 +7,7 @@ const {
     anglefunc,
     selisihharifunc,
     hitungharifunc,
-} = require('./DAY01-EXERCISE-BUDI')
+} = require('./DAY01-EXERCISE')
 
 test("Cek luas persegi panjang",()=>{
     expect(luasfunc(2,4)).toBe(8)

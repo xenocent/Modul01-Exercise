@@ -5,7 +5,7 @@ const {
     sumnumberfunc,
     faktorialfunc,
     fibbonacifunc,
-} = require('./DAY02-EXERCISE-BUDI')
+} = require('./DAY02-EXERCISE')
 
 test("Cek Celcius to Farenheit",()=>{
     expect(celtofarfunc(10)).toBe("10 C = 50 F")
